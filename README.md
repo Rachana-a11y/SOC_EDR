@@ -1,4 +1,4 @@
-# Project 2: Enterprise EDR & Threat Hunting Grid (Sentient Shield)
+# Enterprise EDR & Threat Hunting Grid (Sentient Shield)
 
 **Objective:**  
 Build an enterprise-grade SOC framework for real-time detection and automated response to brute-force and ransomware attacks. Includes File Integrity Monitoring (FIM), MITRE ATT&CK mapping, and active response automation.
