@@ -174,9 +174,10 @@ sudo hydra -l username -P /usr/share/wordlists/rockyou.txt ssh:Target_Ip
 ```
 <img width="1003" height="405" alt="w3(hydra)" src="https://github.com/user-attachments/assets/45cc4ca4-38ea-4324-8835-88eded8aa03e" />
 
+
 <img width="895" height="202" alt="w-3" src="https://github.com/user-attachments/assets/32ae5f1c-d8d5-4cb2-a9e2-71e309073952" />
 
-<img width="862" height="542" alt="week3()" src="https://github.com/user-attachments/assets/40378857-0d8a-48fa-b29b-81f842c12517" />
+
 
 **Verify Firewall Block**
 ```
@@ -249,6 +250,7 @@ Run the following command:
 ```powershell
 .\Sysmon64.exe -c
 ```
+<img width="862" height="542" alt="week3()" src="https://github.com/user-attachments/assets/40378857-0d8a-48fa-b29b-81f842c12517" />
 
 #### Explanation
 
@@ -281,9 +283,12 @@ Open PowerShell on the Windows endpoint:
 ```powershell
 vssadmin delete shadows /all /quiet
 ```
-<img width="1891" height="921" alt="w4(1)" src="https://github.com/user-attachments/assets/658b091d-bd37-4c08-bd37-654af4270fe6" />
 <img width="928" height="983" alt="w4(2)" src="https://github.com/user-attachments/assets/9bd1ca5e-621c-4970-a565-4751986a1c55" />
+
 <img width="1366" height="868" alt="w4(3)" src="https://github.com/user-attachments/assets/b8558e98-8d60-4d8a-978e-68f509ef65b9" />
+
+
+<img width="1891" height="921" alt="w4(1)" src="https://github.com/user-attachments/assets/658b091d-bd37-4c08-bd37-654af4270fe6" />
 
 
 
