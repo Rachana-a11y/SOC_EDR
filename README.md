@@ -22,7 +22,7 @@ The SOC lab consists of three machines:
    - Sysmon installed
    - File integrity monitoring
 
-3. Attacker Machine (Kali Linux)
+3. Attacker Machine (Kali Linux) 
    - Hydra
    - Attack simulation
 
@@ -95,7 +95,7 @@ Steps & Commands
 ```bash
 <syscheck>
   <directories check_all="yes">/etc,/var/www/html,/opt/app/config</directories>
-  <frequency>600</frequency>  <!-- check every 10 minutes for enterprise environment -->
+  <frequency>600</frequency>  
 </syscheck>
 ```
 2. Custom XML Rule
