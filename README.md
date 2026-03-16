@@ -74,11 +74,6 @@ Install Sysmon:
 Sysmon64.exe -accepteula -i sysmonconfig.xml
 ```      
 
-
-
-
-
-
 Explanation:
 
 Agents collect real-time system and log data.
@@ -155,13 +150,17 @@ Unauthorized access → T1078 (Valid Accounts)
 ```bash
 sudo nano /var/ossec/etc/ossec.conf
 ```
+
 ```XML
-<active-response>
-  <command>firewall-drop</command>
-  <location>local</location>
-  <rules_id>5710</rules_id>
-  <timeout>600</timeout>
-</active-response>
+  <!-- Active Response (Week-3) -->
+
+  <active-response>
+    <command>firewall-drop</command>
+    <location>local</location>
+    <rules_id>5710,5712,5501,5760,1002</rules_id>
+    <timeout>3600</timeout>
+  </active-response>
+```
 ```
 **Restart Wazuh Manager**
 ```
@@ -227,6 +226,7 @@ Open **PowerShell as Administrator** and run:
 ```powershell
 .\Sysmon64.exe -i sysmonconfig.xml
 ```
+<img width="1918" height="932" alt="Screenshot 2026-03-12 202029" src="https://github.com/user-attachments/assets/9c636068-f600-4cf7-a3da-9a42cc13b53f" />
 
 #### Explanation
 
@@ -284,6 +284,8 @@ Open PowerShell on the Windows endpoint:
 vssadmin delete shadows /all /quiet
 ```
 <img width="928" height="983" alt="w4(2)" src="https://github.com/user-attachments/assets/9bd1ca5e-621c-4970-a565-4751986a1c55" />
+
+
 
 <img width="1366" height="868" alt="w4(3)" src="https://github.com/user-attachments/assets/b8558e98-8d60-4d8a-978e-68f509ef65b9" />
 
