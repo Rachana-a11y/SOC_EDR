@@ -88,18 +88,7 @@ Steps & Commands
   <frequency>600</frequency>  
 </syscheck>
 ```
-2. Custom XML Rule
-```xml
-<group name="local,syslog,sshd,">
 
-  <rule id="100001" level="8">
-    <if_sid>5716</if_sid>
-    <description>sshd: authentication failed - Possible brute force attempt</description>
-    <group>authentication_failed,bruteforce,pci_dss_10.2.4,pci_dss_10.2.5,</group>
-  </rule>
-
-</group>
-```
 3. Enable Vulnerability Detector
 
 sudo nano /var/ossec/etc/ossec.conf
@@ -258,9 +247,30 @@ DNSQuery enabled
 These events help detect suspicious activities such as malware execution or unauthorized network connections.
 
 ---
-## Week 4 – Threat Simulation
+## Week 4: Threat Simulation 
 
-**Objective:** Simulate ransomware activity on the Windows endpoint and detect it using Wazuh.
+### Objective
+Simulate ransomware behavior using Atomic Red Team techniques such as shadow copy deletion.
+
+### Attack Simulation
+- Created shadow copy
+- Deleted using: vssadmin delete shadows /all /quiet
+
+### Detection Results
+- Wazuh detected process creation
+- Custom rules triggered for ransomware behavior
+
+### Custom Detection Rules   👈 HERE
+
+Custom Wazuh rules were created to detect:
+
+- SSH brute-force attempts
+- Suspicious ransomware file extensions (.locked)
+- Mass file modifications
+- Shadow copy deletion (ransomware behavior)
+
+Configuration file:
+configs/local_rules.xml
 
 ---
 
@@ -279,6 +289,10 @@ vssadmin delete shadows /all /quiet
 ---
 
 <img width="1897" height="293" alt="image" src="https://github.com/user-attachments/assets/bcf5dabc-8bff-4cbe-b1b0-105f731c4f71" />
+
+MITRE ATT&CK Mapping:
+- T1486 – Data Encrypted for Impact
+- T1490 – Inhibit System Recovery
 
 ---
 
