@@ -52,8 +52,6 @@ sudo nano /var/ossec/etc/ossec.conf   # configure Wazuh Manager IP
 sudo systemctl enable --now wazuh-agent
 sudo systemctl status wazuh-agent
 ```
-<img width="752" height="571" alt="12" src="https://github.com/user-attachments/assets/5d8f7507-4cfc-4cd4-acaf-aa935a12d09a" />
-
 
 **3. Windows Agent & Sysmon**
 
@@ -90,9 +88,10 @@ Steps & Commands
 ```
 
 3. Enable Vulnerability Detector
-
+``` bash
 sudo nano /var/ossec/etc/ossec.conf
 sudo systemctl restart wazuh-agent
+```
 
 4. Test Detection
 
