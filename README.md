@@ -89,13 +89,15 @@ Steps & Commands
 </syscheck>
 ```
 2. Custom XML Rule
-```bash
-<group name="custom-app-logs">
-  <rule id="100001" level="10">
-    <decoded_as>custom-app</decoded_as>
-    <description>Critical configuration change detected</description>
-    <frequency>1</frequency>
+```xml
+<group name="local,syslog,sshd,">
+
+  <rule id="100001" level="8">
+    <if_sid>5716</if_sid>
+    <description>sshd: authentication failed - Possible brute force attempt</description>
+    <group>authentication_failed,bruteforce,pci_dss_10.2.4,pci_dss_10.2.5,</group>
   </rule>
+
 </group>
 ```
 3. Enable Vulnerability Detector
@@ -147,7 +149,7 @@ sudo nano /var/ossec/etc/ossec.conf
   <active-response>
     <command>firewall-drop</command>
     <location>local</location>
-    <rules_id>5710,5712,5501,5760,1002</rules_id>
+    <rules_id>5716,5715,5710,5712</rules_id>
     <timeout>3600</timeout>
   </active-response>
 ```
