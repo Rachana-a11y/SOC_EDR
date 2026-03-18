@@ -170,11 +170,10 @@ sudo systemctl restart wazuh-manager
 ``` bash
 sudo hydra -l username -P /usr/share/wordlists/rockyou.txt ssh:Target_Ip
 ```
-<img width="1003" height="405" alt="w3(hydra)" src="https://github.com/user-attachments/assets/45cc4ca4-38ea-4324-8835-88eded8aa03e" />
+<img width="1567" height="202" alt="image" src="https://github.com/user-attachments/assets/2c7e32ec-5d3b-43a9-9e8e-6db4984d1e0e" />
 
 
-<img width="895" height="202" alt="w-3" src="https://github.com/user-attachments/assets/32ae5f1c-d8d5-4cb2-a9e2-71e309073952" />
-
+<img width="1523" height="496" alt="image" src="https://github.com/user-attachments/assets/15699a77-ebe3-489b-895e-8523ae601b62" />
 
 
 **Verify Firewall Block**
