@@ -1,5 +1,9 @@
 # Enterprise EDR & Threat Hunting Grid (Sentient Shield)
 
+## Project Overview
+
+This project simulates a real-world Security Operations Center (SOC) using Wazuh, covering detection engineering, active response, and ransomware threat simulation.
+
 **Objective:**  
 Build an enterprise-grade SOC framework for real-time detection and automated response to brute-force and ransomware attacks. Includes File Integrity Monitoring (FIM), MITRE ATT&CK mapping, and active response automation.
 
@@ -258,6 +262,11 @@ NetworkConnect enabled
 FileCreate enabled
 DNSQuery enabled
 ```
+---
+
+<img width="1692" height="846" alt="image" src="https://github.com/user-attachments/assets/53cee2f5-a6d0-4eb4-8f3f-c63cc2c39fd8" />
+
+---
 
 These events help detect suspicious activities such as malware execution or unauthorized network connections.
 
@@ -319,22 +328,19 @@ A custom Wazuh rule was developed to detect shadow copy deletion activity via Sy
 
 High-severity alerts were successfully generated and visualized in the Wazuh dashboard.
 
+This attack simulates ransomware behavior by deleting shadow copies, preventing system recovery (MITRE T1490).
+
 ---
-🔎 Detection Workflow
-Atomic Red Team Attack Executed
-        │
-        ▼
-Sysmon Logs Event
-        │
-        ▼
-Wazuh Agent Collects Log
-        │
-        ▼
-Wazuh Manager Analyzes Event
-        │
-        ▼
-Security Alert Generated
+
+### Attack Flow (Kill Chain)
+
+1. Initial Access → SSH brute-force attack
+2. Execution → Command execution (vssadmin)
+3. Impact → Shadow copy deletion (T1490)
+4. Detection → Wazuh alerts and custom rules triggered
+
 ---
+
 ## Conclusion
 
 This project successfully demonstrates a working SOC environment capable of detecting and responding to security threats in real time.
