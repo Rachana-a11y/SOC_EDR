@@ -282,18 +282,12 @@ Open PowerShell on the Windows endpoint:
 ```powershell
 vssadmin delete shadows /all /quiet
 ```
-<img width="928" height="983" alt="w4(2)" src="https://github.com/user-attachments/assets/9bd1ca5e-621c-4970-a565-4751986a1c55" />
 
+<img width="1917" height="858" alt="image" src="https://github.com/user-attachments/assets/817232bf-89b5-4150-8c39-d56e33877f9e" />
 
+---
 
-<img width="1366" height="868" alt="w4(3)" src="https://github.com/user-attachments/assets/b8558e98-8d60-4d8a-978e-68f509ef65b9" />
-
-
-<img width="1891" height="921" alt="w4(1)" src="https://github.com/user-attachments/assets/658b091d-bd37-4c08-bd37-654af4270fe6" />
-
-
-
-
+<img width="1897" height="293" alt="image" src="https://github.com/user-attachments/assets/bcf5dabc-8bff-4cbe-b1b0-105f731c4f71" />
 
 ---
 🔎 Detection Workflow
