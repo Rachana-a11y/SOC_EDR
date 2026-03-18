@@ -97,11 +97,15 @@ sudo systemctl restart wazuh-agent
 
 echo "Test modification" >> /var/www/html/index.html
 
+---
+
 <img width="1917" height="962" alt="week2(failed)" src="https://github.com/user-attachments/assets/1cfc5e32-acb5-4af9-8c0a-a48f1373e8ed" />
+
+---
 
 <img width="1918" height="927" alt="week2(user group)" src="https://github.com/user-attachments/assets/5727c99a-342a-4e38-91bf-6330fdd8ffc1" />
 
-
+---
 
 Explanation:
 
@@ -151,11 +155,14 @@ sudo systemctl restart wazuh-manager
 ``` bash
 sudo hydra -l username -P /usr/share/wordlists/rockyou.txt ssh:Target_Ip
 ```
+---
 <img width="1567" height="202" alt="image" src="https://github.com/user-attachments/assets/2c7e32ec-5d3b-43a9-9e8e-6db4984d1e0e" />
 
+---
 
 <img width="1523" height="496" alt="image" src="https://github.com/user-attachments/assets/15699a77-ebe3-489b-895e-8523ae601b62" />
 
+---
 
 **Verify Firewall Block**
 ```
@@ -204,7 +211,12 @@ Open **PowerShell as Administrator** and run:
 ```powershell
 .\Sysmon64.exe -i sysmonconfig.xml
 ```
+
+---
+
 <img width="1918" height="932" alt="Screenshot 2026-03-12 202029" src="https://github.com/user-attachments/assets/9c636068-f600-4cf7-a3da-9a42cc13b53f" />
+
+---
 
 #### Explanation
 
@@ -228,7 +240,11 @@ Run the following command:
 ```powershell
 .\Sysmon64.exe -c
 ```
+---
+
 <img width="862" height="542" alt="week3()" src="https://github.com/user-attachments/assets/40378857-0d8a-48fa-b29b-81f842c12517" />
+
+---
 
 #### Explanation
 
@@ -281,12 +297,15 @@ Open PowerShell on the Windows endpoint:
 ```powershell
 vssadmin delete shadows /all /quiet
 ```
+---
 
 <img width="1917" height="858" alt="image" src="https://github.com/user-attachments/assets/817232bf-89b5-4150-8c39-d56e33877f9e" />
 
 ---
 
 <img width="1897" height="293" alt="image" src="https://github.com/user-attachments/assets/bcf5dabc-8bff-4cbe-b1b0-105f731c4f71" />
+
+---
 
 MITRE ATT&CK Mapping:
 - T1486 – Data Encrypted for Impact
