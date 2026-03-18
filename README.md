@@ -9,21 +9,12 @@ Infotact servers are under constant brute-force and ransomware threats. This pro
 ---
 ## Lab Architecture
 
-The SOC lab consists of three machines:
+The Wazuh manager is deployed on a centralized Linux server. 
+Agents are installed on both Windows and Linux endpoints.
 
-1. Wazuh Server (Ubuntu)
-   - Wazuh Manager
-   - Wazuh Dashboard
-   - Log analysis and correlation
+The Linux system acts as the SSH target for brute-force attack simulation, while the Windows system is used for ransomware simulation using Sysmon.
 
-2. Windows Endpoint
-   - Wazuh Agent
-   - Sysmon installed
-   - File integrity monitoring
-
-3. Attacker Machine (Kali Linux) 
-   - Hydra
-   - Attack simulation
+Active response for SSH brute-force detection must be configured on the Linux agent, as firewall rules are enforced on the target system.
 
 Attack traffic → Wazuh detection → Alert generation → Active response
 ---
@@ -181,11 +172,10 @@ sudo hydra -l username -P /usr/share/wordlists/rockyou.txt ssh:Target_Ip
 sudo iptables -L --line-numbers
 ```
 
-Screenshots:
-�
-Wazuh detected multiple failed login attempts triggered by Hydra.
-�
-Attacker IP automatically blocked by Wazuh active response.
+A brute-force attack was simulated using Hydra from Kali Linux.
+Wazuh successfully detected multiple failed login attempts.
+
+Active response was configured; however, firewall blocking requires the Wazuh agent to be installed on the Linux target system.
 
 Windows default logs provide limited visibility. Sysmon (System Monitor) from Microsoft Sysinternals generates detailed logs such as:
 
@@ -287,6 +277,14 @@ vssadmin delete shadows /all /quiet
 ---
 
 <img width="1897" height="293" alt="image" src="https://github.com/user-attachments/assets/bcf5dabc-8bff-4cbe-b1b0-105f731c4f71" />
+
+---
+
+Ransomware behavior was simulated by creating and deleting volume shadow copies using the vssadmin utility.
+
+A custom Wazuh rule was developed to detect shadow copy deletion activity via Sysmon logs and map it to MITRE ATT&CK technique T1490 (Inhibit System Recovery).
+
+High-severity alerts were successfully generated and visualized in the Wazuh dashboard.
 
 ---
 🔎 Detection Workflow
