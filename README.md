@@ -259,7 +259,7 @@ Simulate ransomware behavior using Atomic Red Team techniques such as shadow cop
 - Wazuh detected process creation
 - Custom rules triggered for ransomware behavior
 
-### Custom Detection Rules   👈 HERE
+### Custom Detection Rules 
 
 Custom Wazuh rules were created to detect:
 
@@ -268,8 +268,7 @@ Custom Wazuh rules were created to detect:
 - Mass file modifications
 - Shadow copy deletion (ransomware behavior)
 
-Configuration file:
-configs/local_rules.xml
+Configuration file: [local_rules.xml](configs/local_rules.xml)
 
 ---
 
