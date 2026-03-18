@@ -175,7 +175,7 @@ sudo iptables -L --line-numbers
 A brute-force attack was simulated using Hydra from Kali Linux.
 Wazuh successfully detected multiple failed login attempts.
 
-Active response was configured; however, firewall blocking requires the Wazuh agent to be installed on the Linux target system.
+Active response was configured; however, IP blocking requires the Wazuh agent to be installed on the Linux target system. In this setup, detection was verified, while automated blocking can be achieved with proper agent deployment.
 
 Windows default logs provide limited visibility. Sysmon (System Monitor) from Microsoft Sysinternals generates detailed logs such as:
 
